@@ -25,3 +25,4 @@ yarn-error.log*
 original/
 z_checkout.txt
 node_modules/
+src/components/UserContext.js
