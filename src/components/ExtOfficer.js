@@ -10,7 +10,7 @@ const ExtensionOfficerDashboard = ({ token, userId }) => {
   useEffect(() => {
     const fetchConsultations = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/seek-advice/${userId}/messages/`, {
+        const response = await axios.get(`https://tyktyk.pythonanywhere.com/seek-advice/${userId}/messages/`, {
           headers: {
             'Authorization': `Token ${token}`
           }
@@ -24,7 +24,7 @@ const ExtensionOfficerDashboard = ({ token, userId }) => {
 
     const fetchCropDistribution = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/cropinfo/crop-distribution/', {
+        const response = await axios.get('https://tyktyk.pythonanywhere.com/cropinfo/crop-distribution/', {
           headers: {
             'Authorization': `Token ${token}`
           }

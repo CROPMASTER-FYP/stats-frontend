@@ -30,7 +30,7 @@ const FarmerOrderHistory = ({ token }) => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/orders/farmer/my_orders/', {
+        const response = await axios.get('https://tyktyk.pythonanywhere.com/orders/farmer/my_orders/', {
           headers: {
             Authorization: `Token ${token}`,
           },

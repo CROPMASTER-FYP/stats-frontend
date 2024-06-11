@@ -8,7 +8,7 @@ const UserVisits = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://tyktyk.pythonanywhere.com/api/uservisits/statistics/')
+    fetch('https://tyktyk.pythonanywhere.comapi/uservisits/statistics/')
       .then(response => response.json())
       .then(dailyData => {
         const aggregatedData = aggregateMonthlyData(dailyData);

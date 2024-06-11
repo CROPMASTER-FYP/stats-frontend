@@ -14,7 +14,7 @@ const CropData = () => {
   const [colorMap, setColorMap] = useState({});
 
   useEffect(() => {
-    fetch('https://tyktyk.pythonanywhere.com/orders/stats/monthly/')
+    fetch('https://tyktyk.pythonanywhere.comorders/stats/monthly/')
       .then(response => response.json())
       .then(monthlyData => {
         const products = getUniqueProducts(monthlyData);
