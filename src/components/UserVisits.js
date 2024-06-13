@@ -8,7 +8,7 @@ const UserVisits = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://tyktyk.pythonanywhere.comapi/uservisits/statistics/')
+    fetch('https://tyktyk.pythonanywhere.com/api/uservisits/statistics/')
       .then(response => response.json())
       .then(dailyData => {
         const aggregatedData = aggregateMonthlyData(dailyData);
@@ -48,6 +48,8 @@ const UserVisits = () => {
   const januaryIndex = findJanuaryIndex(data);
 
   return (
+    <div>
+    <h1>User Visits statistics</h1>
     <ResponsiveContainer width="100%" height={400}>
       <BarChart
         width={600}
@@ -68,6 +70,7 @@ const UserVisits = () => {
         )}
       </BarChart>
     </ResponsiveContainer>
+    </div>
   );
 }
 

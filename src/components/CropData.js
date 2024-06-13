@@ -14,7 +14,7 @@ const CropData = () => {
   const [colorMap, setColorMap] = useState({});
 
   useEffect(() => {
-    fetch('https://tyktyk.pythonanywhere.comorders/stats/monthly/')
+    fetch('https://tyktyk.pythonanywhere.com/orders/stats/monthly/')
       .then(response => response.json())
       .then(monthlyData => {
         const products = getUniqueProducts(monthlyData);
@@ -76,6 +76,8 @@ const CropData = () => {
   };
 
   return (
+    <div>
+      <h1>All orders statistics</h1>
     <ResponsiveContainer width="100%" height={400}>
       <BarChart
         width={600}
@@ -95,6 +97,7 @@ const CropData = () => {
         ))}
       </BarChart>
     </ResponsiveContainer>
+    </div>
   );
 }
 
